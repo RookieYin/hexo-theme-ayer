@@ -6,6 +6,7 @@
   right aside-width
   left 0
   opacity 0
+  z-index 10
   transition(.3s)
   &.on
     top 0
@@ -20,7 +21,27 @@
   box-shadow 0 1rem 3rem rgba(sea, .05)
   max-height 100vh
   overflow-y auto
-
+  width 70%
+  max-width 70rem
+.local-search::-webkit-scrollbar{
+  width:5px;
+  height:10px;
+  /**/
+}
+.local-search::-webkit-scrollbar-track{
+  background: rgb(239, 239, 239);
+  border-radius:2px;
+}
+.local-search::-webkit-scrollbar-thumb{
+  background: #0a0a0a;
+  border-radius:10px;
+}
+.local-search::-webkit-scrollbar-thumb:hover{
+  background: #403e3e;
+}
+.local-search::-webkit-scrollbar-corner{
+  background: #179a16;
+}
 .local-search-input
   font-size 120%
   border 0
