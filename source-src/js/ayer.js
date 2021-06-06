@@ -122,11 +122,18 @@
   const $content = $(".content"),
     $sidebar = $(".sidebar");
 
-  $(".navbar-toggle").on("click", function () {
-    $(".content,.sidebar").addClass("anim");
-    $content.toggleClass("on");
+  $(".navbar-menu").on("click", function () {
     $sidebar.toggleClass("on");
+    $(".navbar2").toggleClass("on");
+    $(".navbar").toggleClass("off");
   });
+  $(window).resize(function(){
+    if($(window).width()>740 && $sidebar.hasClass("on")){
+      $sidebar.removeClass("on");
+      $(".navbar2").removeClass("on");
+      $(".navbar").removeClass("off");
+    }
+  })
 
   // Reward
   $("#reward-btn").click(() => {

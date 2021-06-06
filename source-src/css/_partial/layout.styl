@@ -31,36 +31,32 @@
   -webkit-overflow-scrolling touch
   &.on
     margin-left 0 !important
-
+.content::-webkit-scrollbar{
+  width:5px;
+  height:10px;
+  /**/
+}
+.content::-webkit-scrollbar-track{
+  background: rgb(239, 239, 239);
+  border-radius:2px;
+}
+.content::-webkit-scrollbar-thumb{
+  background: #403e3e;
+  border-radius:10px;
+}
+.content::-webkit-scrollbar-thumb:hover{
+  background: #403e3e;
+}
+.content::-webkit-scrollbar-corner{
+  background: #179a16;
+}
 .sidebar
-  position fixed
   z-index 9
-  left - aside-width
-  bottom 0
-  width aside-width
-  height 100%
+  height  6rem
+  width 100%
   background-color rgba(0,0,0,.8)
   &.on
-    left 0
-
-.navbar-toggle
-  position absolute
-  top gutter-width
-  left: gutter-width + aside-width
-  border none
-  height 4rem
-  width 4rem
-  border-radius 50%
-  background-color rgba(black, .5)
-  color white
-  transition(transition-base)
-  opacity .5
-  &:hover
-    opacity 1
-  &::before
-    content '\ee09'
-    font-family remixicon
-    font-size larger
+    height auto
 
 .wrap, .outer
   position relative
@@ -90,18 +86,18 @@
     padding-left 0
   .local-search
     width wrap-width
-  
-  .content
-    &.on
-      transform: none
+
+  //.content
+  //  &.on
+  //    transform: none
 
 @media (max-width: 768px)
   .cover
     .forkMe
       display none
-  .content
-    &.on
-      margin-left -1px !important
+  //.content
+  //  &.on
+  //    margin-left -1px !important
   .sidebar
     background-color body-color
   .navbar-toggle

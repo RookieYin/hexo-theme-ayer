@@ -6,16 +6,16 @@ if hexo-config('mouse.enable')
     body
         cursor: url($mouse-url),auto;
 
-.sidebar
-    left - $aside-width
-    width $aside-width
-    &.on
-        left 0
-.content
-    &.on
-        margin-left 0 !important
-.navbar-toggle
-    left 1.5rem + $aside-width
+//.sidebar
+//    left - $aside-width
+//    width $aside-width
+//    &.on
+//        left 0
+//.content
+//    &.on
+//        margin-left 0 !important
+//.navbar-toggle
+//    left 1.5rem + $aside-width
 .search-form-wrap
     right $aside-width
 
@@ -25,12 +25,12 @@ if hexo-config('mouse.enable')
 @media(max-width: 768px)
     .tocbot
         display none !important
-    .sidebar
-        left 0
-        &.on
-            left - $aside-width
-    .content
-        transform translateX($aside-width)
-        &.on
-            transform translateX(0)
-    
+    //.sidebar
+    //    left 0
+    //    &.on
+    //        left - $aside-width
+    //.content
+    //    transform translateX($aside-width)
+    //    &.on
+    //        transform translateX(0)
+

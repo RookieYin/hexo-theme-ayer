@@ -1,11 +1,21 @@
 .navbar
-  position relative
-  padding-top 3rem
-  text-align center
+  display flex
+  width: 100%
+  height 100%
+  justify-content center
+  align-items center
+  &.off
+    display none
   .nav
     list-unstyled()
+    margin-left auto
+    align-items center
+    justify-content center
+    .nav-item
+      display inline-block
+      align-items center
     .nav-item-link
-      display block
+      text-align center
       padding 1rem
       color #bbb
       text-decoration none
@@ -14,7 +24,8 @@
         opacity .8
         background-color body-color
     &.nav-main
-      height 60vh
+      height 100%
+      display flex
       overflow-y scroll
       scrollbar-width none
       -ms-overflow-style none
@@ -22,19 +33,103 @@
         width 0px
         height 0px
       .nav-item-link
-        i
-          font-size 1rem
-          display block
-          line-height 1
-.navbar-bottom
-  position absolute
-  bottom 0
-  width 100%
-  font-size 2rem
-.logo
-  text-align center
-  margin-bottom 2rem
-  img
-    width logo-size
+        font-size 1.5rem
+        color #ffffff
+        line-height 1
+        transition-duration: 1s;
+        &.nav-item-search
+          font-size 2rem
+    .navbar-menu
+      width: 2rem;
+      height: 1.6rem;
+      padding: 0.4rem 0;
+      border-top: 0.3rem solid;
+      border-bottom: 0.3rem solid;
+      background-color: #ffffff;
+      background-clip: content-box;
+      &:hover
+        opacity .8
+        background-color #ffffff
 
-  
+.logo
+  height 80%
+  margin-left 1rem
+  img
+    width 4.8rem
+
+.navbar2
+  display none
+  width: 100%
+  height 100%
+  justify-content center
+  align-items center
+  &.on
+    display block
+  .nav-item2
+    align-items center
+    height 4rem
+  .nav-item-link2
+    text-align center
+    padding 1.5rem
+    color #ffffff
+    text-decoration none
+    cursor pointer
+    width 10rem
+    font-size 1.8rem
+    &:hover
+      opacity .8
+      background-color body-color
+  .navbar-menu
+    width: 2rem;
+    height: 1.6rem;
+    padding: 0.4rem 0;
+    border-top: 0.3rem solid #ffffff;
+    border-bottom: 0.3rem solid #ffffff;
+    background-color: #ffffff;
+    background-clip: content-box;
+    &:hover
+      opacity .8
+      background-color #ffffff
+  .nav-item-search
+    font-size 2rem
+  .ri-search-line
+    color #ffffff
+
+@media screen and (min-width: 1200px)
+  .nav-item-link
+    width 10rem
+    display inline-block
+  .navbar-menu-wrap
+    display none
+@media screen and (min-width: 900px) and (max-width: 1200px)
+  .nav-item-link
+    width 8rem
+    display inline-block
+  .navbar-menu-wrap
+    display none
+@media screen and (min-width:740px) and (max-width: 900px)
+  .nav-item-link
+     width 6.5rem
+     display inline-block
+  .navbar-menu-wrap
+    display none
+@media screen and (min-width:500px) and (max-width:740px)
+  .nav-item-link
+    display none
+    &.nav-item-search
+      display inline-block
+    &.navbar-menu-wrap
+      display block
+  .navbar-title2
+    display inline-block
+@media screen and (max-width:500px)
+  .nav-item-link
+    display none
+    &.nav-item-search
+      display inline-block
+    &.navbar-menu-wrap
+      display block
+  .nav-title
+    display none
+  .navbar-title2
+    display none

@@ -4,10 +4,8 @@ menu:
   归档: /archives
   分类: /categories
   标签: /tags
-  旅行: /tags/旅行/
-  摄影: http://shenyu-vip.lofter.com
   友链: /friends
-  关于我: /2019/about
+  关于我: /about-me/2021
 
 # 站点次标题和打字动效
 # https://github.com/mattboldt/typed.js
@@ -23,14 +21,14 @@ subtitle:
   showCursor: true # 是否显示光标
 
 # 网站图标和侧边栏logo
-favicon: /favicon.ico
-logo: /images/ayer-side.svg
+favicon: /1.jpg
+logo: /1.jpg
 
 # 封面配置
 # enable-是否启用封面；path-封面背景图；logo-封面logo
 cover:
-  enable: true
-  path: /images/cover1.jpg # /source/images目录下附送多张美图，可更换
+  enable: false
+  path: /images/test.png # /source/images目录下附送多张美图，可更换
   logo: false #/images/ayer.svg，如果不要直接设置成false
 
 # 页面顶部进度条
@@ -38,7 +36,7 @@ progressBar: true
 
 # 告示板模块
 broadcast:
-  enable: true # true开启，false关闭
+  enable: false # true开启，false关闭
   type: 2 # 1：自定义输入，2：一言api(https://hitokoto.cn/)
   text: 一个安静优雅的hexo主题，快速且响应式。 # type为1时有效
 
@@ -112,7 +110,7 @@ mouse:
   path: /images/mouse.cur
 
 # 鼠标点击效果：0-关闭，1-爱心，2-爆炸烟花，3-粒子烟花
-click_effect: 0
+click_effect: 1
 
 # 页面宽度自定义（不建议修改，可能造成布局混乱），article_width文章宽度，sidebar_width侧边栏宽度
 layout:
@@ -122,7 +120,7 @@ layout:
 # GitHub Ribbons-封面右上角的forkme，换样式直接在source/images目录下替换forkme图片
 github:
   # (关闭请设置为false)
-  enable: true
+  enable: false
   url: https://github.com/Shen-Yu/hexo-theme-ayer
 
 # 网易云音乐插件
@@ -164,10 +162,10 @@ mermaid:
   theme: forest
 
 # 网站成立年份(默认为 2019，若填入年份小于当前年份，则显示为 2018-2019 类似的格式)
-since: 2015
+since: 2021
 
 # 是否显示页脚信息(建议保留)
-pageFooter: true
+pageFooter: false
 
 # ICP备案信息尾部显示
 icp:
@@ -200,18 +198,21 @@ friends_link:
   Hexo图表插件:
     url: https://github.com/Shen-Yu/hexo-tag-chart
     img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/hexo-tag-chart.png
+  Tilden's Notes:
+    url: https://itiandong.com/
+    img: https://itiandong.com/images/avatar.jpg
 
 # 评论：1、Valine(推荐)；2、Gitalk；3、Twikoo; 4.MiniValine
 
 # 1、Valine[一款快速、简洁且高效的无后端评论系统](https://github.com/xCss/Valine)
 # 启用Valine必须先创建leancloud应用， 获取 id|key 填入即可
 leancloud:
-  enable: true
+  enable: false
   app_id: #
   app_key: #
 # Valine配置
 valine:
-  enable: true # 是否启用
+  enable: false # 是否启用
   avatar: monsterid # 头像样式(https://valine.js.org/avatar.html)
   placeholder: 给我的文章加点评论吧~ # placeholder
 
@@ -237,17 +238,3 @@ minivaline:
   # emoticonUrl 等列表选项 可参考 https://github.com/MiniValine/hexo-next-minivaline
   # 下面是一个例子：
   serverURL: https://minivaline.your-domain.com
-
-# 首页广告配置
-# 可以根据需要自行增加ad_3，ad_4...，留空则不显示，建议图片和url不要带ad等关键词，否则可能会被adblock等插件屏蔽
-ads:
-  ad_1:
-    title: vultr优惠vps
-    img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/vultr.png
-    url: https://www.vultr.com/?ref=8630075
-    width: 300
-  ad_2:
-    title: 云服务器全球购低至2折
-    img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/ten_2.jpg
-    url: https://curl.qcloud.com/kvO7hb43
-    width: 300

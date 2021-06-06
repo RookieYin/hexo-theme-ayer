@@ -1,33 +1,62 @@
-<button class="navbar-toggle"></button>
+<!--<button class="navbar-toggle"></button>-->
 <nav class="navbar">
-  <% if (theme.logo){ %>
   <div class="logo">
-    <a href="<%- url_for() %>"><img src="<%- theme.logo %>" alt="<%= config.title %>"></a>
+    <a href="<%- url_for() %>">
+      <img src="<%- theme.logo %>"
+           style="border-radius: 50%;max-width: none;">
+    </a>
   </div>
-  <% } %>
-  <ul class="nav nav-main">
+  <div class = nav-title style="font-size: 2.5rem;color: #ffffff;margin-left: 4rem;font-weight: bold;min-width: 23rem">
+    RookieYin's Note
+  </div>
+  <div class="nav nav-main">
     <% for (var i in theme.menu){ %>
-    <li class="nav-item">
+    <div class="nav-item">
       <a class="nav-item-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
-    </li>
+    </div>
     <% } %>
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      <% if (theme.search){ %>
+      <div class="nav-item">
+        <div class="nav-item-link navbar-menu-wrap">
+          <div class="navbar-menu"></div>
+        </div>
+      </div>
+    <div class = "nav-item">
       <a class="nav-item-link nav-item-search"  title="<%= __('search') %>">
         <i class="ri-search-line"></i>
       </a>
-      <% } %>
-      <% if (theme.rss){ %>
-      <a class="nav-item-link" target="_blank" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>">
-        <i class="ri-rss-line"></i>
+    </div>
+  </div>
+</nav>
+<nav class="navbar2">
+  <div style="position: relative;">
+      <div style="height: 4.8rem;display: inline-block;margin-top:1rem;margin-left:1rem;">
+        <a href="<%- url_for() %>">
+          <img src="<%- theme.logo %>"
+               style="border-radius: 50%;max-width: none;width:4.8rem">
+        </a>
+      </div>
+    <div class="navbar-title2" style="font-size: 2.5rem;color: #ffffff;margin-left: 4rem;font-weight: bold;margin-top:1rem;
+    min-width: 23rem;height: 4.8rem;overflow: hidden;">
+      <span style="line-height: 4.8rem;">RookieYin's Note</span>
+    </div>
+    <div style="display: inline-block;position: absolute;top:50%;height:50%;transform:translate(-50%,-50%);right:4rem;margin-top: 1rem;">
+      <div class="navbar-menu-wrap">
+        <div class="navbar-menu"></div>
+      </div>
+    </div>
+    <div style="display: inline-block;position: absolute;top:50%;height:50%;transform:translate(-50%,-50%);right:0;">
+      <a class="nav-item-search"  title="<%= __('search') %>">
+        <i class="ri-search-line"></i>
       </a>
-      <% } %>
-    </li>
-  </ul>
+    </div>
+  </div>
+  <div style="display: inline-block;text-align: center;width: 100%;padding-bottom: 1rem;">
+    <% for (var i in theme.menu){ %>
+    <div class="nav-item2">
+      <a class="nav-item-link2" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+    </div>
+    <% } %>
+  </div>
 </nav>
 <div class="search-form-wrap">
   <%- partial('post/search') %>
