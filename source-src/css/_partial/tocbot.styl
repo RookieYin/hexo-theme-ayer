@@ -8,6 +8,7 @@
   opacity .95
   max-width 255px
   border-radius 8px
+  pointer-events none
   > .toc-list
     position relative
     overflow hidden
@@ -37,10 +38,11 @@ a.toc-link
 
 .is-position-fixed
   position fixed !important
-  top 0
-  right 6rem
+  top 6rem
+  right 1rem
   background-color #fff
   z-index 996
+  width 15rem
 
 // Left line before pseudo element.
 .toc-link::before
