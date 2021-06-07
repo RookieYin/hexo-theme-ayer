@@ -8,3 +8,6 @@ node_modules/
 .cache
 .history
 _bak.yml
+*.jpg
+*.png
+*.img
